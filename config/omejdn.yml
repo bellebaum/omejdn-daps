@@ -1,49 +1,26 @@
 ---
-# The Omejdn host
-host: http://localhost:4567
-
-# Enable OpenID funtionality
-openid: true
-
-# Token singing keys and default values
+# Replace all 3 occurences of "http://daps.example.com" with the server's URI
+host: http://daps.example.com
+openid: false
 token:
   expiration: 3600
-  signing_key: omejdn_priv.pem
+  signing_key: daps.key
   algorithm: RS256
-  audience: TestServer
-  issuer: http://localhost:4567
+  audience: idsc:IDS_CONNECTORS_ALL
+  issuer: http://daps.example.com
 id_token:
   expiration: 3600
-  signing_key: omejdn_priv.pem
+  signing_key: daps.key
   algorithm: RS256
-  issuer: http://localhost:4567
+  issuer: http://daps.example.com
 
-# Enabled user backends (can be configured in user_backend.yml)
 user_backend:
 - yaml
 
 # User Selfservice API
 user_selfservice:
-  enabled: true
-  allow_deletion: true
-  allow_password_change: true
-  editable_attributes:
-    - name
-    - family_name
-    - given_name
-    - middle_name
-    - nickname
-    - preferred_username
-    - profile
-    - picture
-    - website
-    - gender
-    - birthdate
-    - zoneinfo
-    - locale
-    - updated_at
-    - email
-    - email_verified
-    - address
-    - phone_number
-    - phone_number_verified
+  enabled: false
+  allow_deletion: false
+  allow_password_change: false
+  editable_attributes: []
+

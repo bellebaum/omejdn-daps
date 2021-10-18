@@ -1,41 +1,16 @@
-# A mapping from scopes to claims
-# Clients and users requesting these scopes will have these
-# included in the resulting access token,
-# if they have attributes corresponding to the claim names
-# Scopes cannot be requested by clients for users unless they have
-# at least one of the claims as attribute
+## Uncomment these lines to enable the Omejdn Admin API
+#omejdn:read: 
+#  - omejdn
+#omejdn:write:
+#  - omejdn
+#omejdn:admin:
+#  - omejdn
 
-# ----- Omejdn API scopes -----
-omejdn:read: 
-  - omejdn
-omejdn:write:
-  - omejdn
-omejdn:admin:
-  - omejdn
-  
-# ----- OpenID Related Scopes -----
-profile:
-  - name
-  - family_name
-  - given_name
-  - middle_name
-  - nickname
-  - preferred_username
-  - profile
-  - picture
-  - website
-  - gender
-  - birthdate
-  - zoneinfo
-  - locale
-  - updated_at
-email:
-  - email
-  - email_verified
-address:
-  - address
-phone:
-  - phone_number
-  - phone_number_verified
-openid:
-  - openid
+# Necessary IDS Claims to issue a DAT
+idsc:IDS_CONNECTOR_ATTRIBUTES_ALL:
+  - securityProfile
+  - referringConnector
+  - "@type"
+  - "@context"
+  - transportCertsSha256
+
