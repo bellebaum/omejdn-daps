@@ -74,6 +74,7 @@ The script will automatically generate new client certificates (`keys/NAME.cert`
 ### Starting Omejdn
 
 Replace the `keys` and `config` folder inside `omejdn-server` by the ones in this folder.
+Copy `daps.key` into `omejdn-server`.
 
 Navigate into `omejdn-server`
 Now you may start Omejdn by executing
@@ -84,6 +85,12 @@ $ ruby omejdn.rb
 ```
 
 The endpoint for issuing DATs is `/token`. You may use it as described in [IDS-G](https://github.com/International-Data-Spaces-Association/IDS-G).
+
+A script to quickly test your setup can be found in `scripts` (requires jq to be installed to format JSON):
+
+```
+$ scripts/test.sh CLIENT_NAME
+```
 
 ## Going Forward
 
