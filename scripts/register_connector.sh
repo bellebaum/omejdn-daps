@@ -41,5 +41,5 @@ cat <<EOF
     value: https://w3id.org/idsa/contexts/context.jsonld
   - key: transportCertsSha256
     value: $CLIENT_CERT_SHA
-  import_certfile: keys/$CLIENT_CERT
+  import_certfile: $CLIENT_CERT
 EOF
