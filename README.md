@@ -17,6 +17,9 @@ In general, it requires registering both the DAPS certificate and its name as a 
 - [Omejdn Server](https://github.com/Fraunhofer-AISEC/omejdn-server)'s dependencies
 - [OpenSSL](https://www.openssl.org/)
 
+This repository has submodules.
+Make sure to download them using `git submodule update --init`
+
 ## Minimal Configuration
 
 The configuration consists of the following steps:
@@ -70,6 +73,9 @@ The script will automatically generate new client certificates (`keys/NAME.cert`
 
 ### Starting Omejdn
 
+Replace the `keys` and `config` folder inside `omejdn-server` by the ones in this folder.
+
+Navigate into `omejdn-server`
 Now you may start Omejdn by executing
 
 ```

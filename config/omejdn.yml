@@ -16,6 +16,7 @@ id_token:
 
 user_backend:
 - yaml
+user_backend_default: yaml
 
 # User Selfservice API
 user_selfservice:
